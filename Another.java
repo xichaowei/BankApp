@@ -7,7 +7,7 @@ public class Another{
         BankAccount test = new BankAccount();
         while(true)
         {
-            System.out.println("Please select: 1.Account Balance  2.Deposit Money 3.Withdraw Money 4.Exit");
+            System.out.println("Please select: 1.Account Balance  2.Deposit Money  3.Withdraw Money  4.Transaction History  5.Exit");
             Scanner scan = new Scanner(System.in);
             int s = scan.nextInt();
             if(s==1)
@@ -26,6 +26,11 @@ public class Another{
                 test.withdrawMethod(x);
             }
             else if(s==4)
+            {
+                System.out.println("This is your transaction history !");
+                test.transactionMethod();
+            }
+            else if(s==5)
                 break;
             else 
                 System.out.println("Please input the correct selection");
